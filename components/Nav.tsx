@@ -15,7 +15,7 @@ const menuImages: Record<MenuState, string> = {
 export const Nav: FC = () => {
   const inputRef = useRef<HTMLInputElement>();
   const { query, push } = useRouter();
-  const menuState = query?.leap || 'closed' as MenuState;
+  const menuState = (query?.leap || 'closed') as MenuState;
   const isOpen = menuState !== 'closed';
 
   useEffect(() => {
