@@ -7,10 +7,10 @@ export default function App({ query }) {
   console.log(query);
 
   return (
-    <div className="w-screen h-screen flex">
-    <Head>
-      <title>{query.name}</title>
-    </Head>
+    <div className="font-sans w-screen h-screen flex">
+      <Head>
+        <title>{query.name}</title>
+      </Head>
       <div className="w-96 h-full bg-white p-6 border-r-2 border-silver">
         <div className="flex items-center">
           <div style={{backgroundColor:query.color}} className="mr-2 w-6 h-6 rounded-full" />
@@ -18,7 +18,11 @@ export default function App({ query }) {
         </div>
       </div>
       <div className="w-full flex flex-col justify-between">
-        <div className="w-full h-16 border-b-2 border-silver" />
+        <div className="flex items-center pl-4 w-full h-16 border-b-2 border-silver">
+          <Link href="/">
+            <a target="grid">&laquo; Home</a>
+          </Link>
+        </div>
         <div className="w-full h-16 border-t-2 border-silver" />
       </div>
     </div>
